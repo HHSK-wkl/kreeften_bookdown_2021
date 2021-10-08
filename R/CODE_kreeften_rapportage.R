@@ -43,6 +43,15 @@ kreeften_per_soort <-
              col_types = c("text", "numeric", "numeric", "date", "text", "text", "numeric")) %>%
   mutate(deelgebied = case_when(str_detect(mp, "S_") ~ "Schieland", str_detect(mp, "K_") ~"Krimpenerwaard", str_detect(mp, "VKRH") ~"Krimpenerwaard"))
 
+alles_per_soort<- read_excel("data/kreeften_per_soort_alles.xlsx",
+                             col_types = c("text", "numeric", "numeric", "date", "text", "text", "numeric", "text")) %>%
+  mutate(deelgebied = case_when(str_detect(mp, "S_") ~ "Schieland", str_detect(mp, "K_") ~"Krimpenerwaard", str_detect(mp, "VKRH") ~"Krimpenerwaard"))
+
+alles_per_soort_2<- read_excel("data/kreeften_per_soort_alles_sam.xlsx",
+                               col_types = c("text", "numeric", "numeric", "date", "text", "text", "numeric", "numeric")) %>%
+  mutate(deelgebied = case_when(str_detect(mp, "S_") ~ "Schieland", str_detect(mp, "K_") ~"Krimpenerwaard", str_detect(mp, "VKRH") ~"Krimpenerwaard"))
+
+
 toestemming <- readxl::read_excel("data/kreeften_toestemming.xlsx") %>% rename(mp = `meetpuntcode`)
 
 ## ---- opzet ----
@@ -76,10 +85,10 @@ totaal_vangst_kaart <-
   ggplot() +
   ggspatial::annotation_map_tile(type = "cartolight", zoomin = 1) +
   geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
-  geom_sf(aes(size = waarde), colour = "darkred", data = . %>% filter(waarde > 0)) +
+  geom_sf(aes(size = waarde), shape = 21, fill = "darkred", colour = "grey20", data = . %>% filter(waarde > 0)) +
   geom_sf(shape = 21, size = 2, data = . %>% filter(waarde == 0)) +
   # scale_colour_viridis_c(direction = -1) +
-  # scale_size(range = c(3,7)) +
+  scale_size(range = c(2,6)) +
   guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal")) +
   hhskthema_kaart() +
   theme(axis.line = element_blank()) +
@@ -157,18 +166,16 @@ aantal_per_soort <-
   group_by(naam) %>%
   mutate(naam2 = glue("{naam}\n n = {n()}")) %>%
   ggplot(aes(fct_reorder(naam2, waarde, .desc = TRUE), waarde)) +
-  geom_beeswarm(width = 0.20, size = 2, colour = hhskblauw)+
-  #geom_jitter(width = 0.20, size = 2, colour = hhskblauw) +
-  scale_y_continuous(limits = c(0, 100), expand = c(0,0)) +
+  # geom_beeswarm(width = 0.20, size = 2, colour = hhskblauw) +
+  geom_quasirandom(width = 0.20, size = 2, colour = hhskblauw) +
+  # geom_jitter(width = 0.20, size = 2, colour = hhskblauw) +
+  scale_y_continuous(limits = c(0, 90), expand = c(0,0)) +
   scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
   labs(title = "Aantal gevangen kreeften per locatie",
        y = "Aantal",
        x = "",
        caption = "Locaties zonder kreeften zijn niet meegenomen")
 
-alles_per_soort_2<- read_excel("data/kreeften_per_soort_alles_sam.xlsx",
-                               col_types = c("text", "numeric", "numeric", "date", "text", "text", "numeric", "numeric")) %>%
-  mutate(deelgebied = case_when(str_detect(mp, "S_") ~ "Schieland", str_detect(mp, "K_") ~"Krimpenerwaard", str_detect(mp, "VKRH") ~"Krimpenerwaard"))
 
 
 alles_vangst_kaart <-
@@ -181,21 +188,19 @@ alles_vangst_kaart <-
   ggplot() +
   ggspatial::annotation_map_tile(type = "cartolight", zoomin = 1) +
   geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
-  geom_sf(aes(size = waarde), colour="darkred", data = . %>% filter(waarde > 0)) +
+  geom_sf(aes(size = waarde), shape = 21, colour = "grey20", fill= "darkred", data = . %>% filter(waarde > 0)) +
   #geom_sf(aes(size = waarde, colour = factor(jaar)),  data = . %>% filter(waarde > 0)) +
-  geom_sf(shape = 21, size = 2, data = . %>% filter(waarde == 0)) +
+  geom_sf(shape = 21, colour = "grey20", size = 2, data = . %>% filter(waarde == 0)) +
   #scale_colour_manual(values = c("grey40", "darkred")) +
-  scale_size(range = c(3,7)) +
-  facet_wrap(~jaar)+
+  scale_size(range = c(2,6)) +
+  facet_wrap(~fct_rev(as.character(jaar)), ncol = 1)+
   guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal"), shape = guide_legend("Jaar")) +
   hhskthema_kaart() +
   theme(axis.line = element_blank()) +
   labs(title = "Aantal gevangen kreeften",
        caption = "Er zijn vooral Rode Amerikaanse rivierkreeften gevangen.\nAndere soorten komen slechts incidenteel voor.")
 
-alles_per_soort<- read_excel("data/kreeften_per_soort_alles.xlsx",
-                             col_types = c("text", "numeric", "numeric", "date", "text", "text", "numeric", "text")) %>%
-  mutate(deelgebied = case_when(str_detect(mp, "S_") ~ "Schieland", str_detect(mp, "K_") ~"Krimpenerwaard", str_detect(mp, "VKRH") ~"Krimpenerwaard"))
+
 
 soort_kaart_per_jaar <-
   alles_per_soort %>%
@@ -271,67 +276,67 @@ tabel_bijlage2 <-
                                pageLength = 5))
 
 ## ---- 2020 vergelijking ----
-kreeften_per_soort_2020 <-
-  read_excel("data/kreeften_per_soort_2020.xlsx",
-             col_types = c("text", "numeric", "numeric", "date", "text", "text", "numeric")) %>%
-  mutate(deelgebied = case_when(str_detect(mp, "S_") ~ "Schieland", str_detect(mp, "K_") ~"Krimpenerwaard", str_detect(mp, "VKRH") ~"Krimpenerwaard"))
+# kreeften_per_soort_2020 <-
+#   read_excel("data/kreeften_per_soort_2020.xlsx",
+#              col_types = c("text", "numeric", "numeric", "date", "text", "text", "numeric")) %>%
+#   mutate(deelgebied = case_when(str_detect(mp, "S_") ~ "Schieland", str_detect(mp, "K_") ~"Krimpenerwaard", str_detect(mp, "VKRH") ~"Krimpenerwaard"))
 
-totaal_vangst_kaart_2020 <-
-  kreeften_per_soort_2020 %>%
-  group_by(mp, x, y) %>%
-  summarise(waarde = sum(waarde)) %>%
-  ungroup() %>%
-  st_as_sf(coords = c("x", "y"), crs = 28992) %>%
+# totaal_vangst_kaart_2020 <-
+#   kreeften_per_soort_2020 %>%
+#   group_by(mp, x, y) %>%
+#   summarise(waarde = sum(waarde)) %>%
+#   ungroup() %>%
+#   st_as_sf(coords = c("x", "y"), crs = 28992) %>%
+#
+#   ggplot() +
+#   ggspatial::annotation_map_tile(type = "cartolight", zoomin = 1) +
+#   geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
+#   geom_sf(aes(size = waarde), colour = "darkred", data = . %>% filter(waarde > 0)) +
+#   geom_sf(shape = 21, size = 2, data = . %>% filter(waarde == 0)) +
+#   # scale_colour_viridis_c(direction = -1) +
+#   # scale_size(range = c(3,7)) +
+#   guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal")) +
+#   hhskthema_kaart() +
+#   theme(axis.line = element_blank()) +
+#   labs(title = "Aantal gevangen kreeften 2020",
+#        caption = "Er zijn vooral Rode Amerikaanse rivierkreeften gevangen.\nAndere soorten komen slechts incidenteel voor.")
+#
+# soort_kaart_2020 <-
+#   kreeften_per_soort_2020 %>%
+#   filter(waarde > 0) %>%
+#   mutate(naam = fct_reorder(naam, waarde, .desc = TRUE)) %>%
+#   st_as_sf(coords = c("x", "y"), crs = 28992) %>%
+#
+#   ggplot() +
+#   # ggspatial::annotation_map_tile(type = "cartolight", zoomin = 0) +
+#   geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
+#   geom_sf(size = 2, colour = "darkred", data = . %>% filter(waarde > 0)) +
+#   guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal")) +
+#   hhskthema_kaart() +
+#   facet_wrap(~naam) +
+#   theme(axis.line = element_blank(),
+#         strip.background = element_rect(fill = NA, colour = NA),
+#         strip.text = element_text(hjust = 0)) +
+#   labs(title = "Verspreiding per soort 2020")
 
-  ggplot() +
-  ggspatial::annotation_map_tile(type = "cartolight", zoomin = 1) +
-  geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
-  geom_sf(aes(size = waarde), colour = "darkred", data = . %>% filter(waarde > 0)) +
-  geom_sf(shape = 21, size = 2, data = . %>% filter(waarde == 0)) +
-  # scale_colour_viridis_c(direction = -1) +
-  # scale_size(range = c(3,7)) +
-  guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal")) +
-  hhskthema_kaart() +
-  theme(axis.line = element_blank()) +
-  labs(title = "Aantal gevangen kreeften 2020",
-       caption = "Er zijn vooral Rode Amerikaanse rivierkreeften gevangen.\nAndere soorten komen slechts incidenteel voor.")
-
-soort_kaart_2020 <-
-  kreeften_per_soort_2020 %>%
-  filter(waarde > 0) %>%
-  mutate(naam = fct_reorder(naam, waarde, .desc = TRUE)) %>%
-  st_as_sf(coords = c("x", "y"), crs = 28992) %>%
-
-  ggplot() +
-  # ggspatial::annotation_map_tile(type = "cartolight", zoomin = 0) +
-  geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
-  geom_sf(size = 2, colour = "darkred", data = . %>% filter(waarde > 0)) +
-  guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal")) +
-  hhskthema_kaart() +
-  facet_wrap(~naam) +
-  theme(axis.line = element_blank(),
-        strip.background = element_rect(fill = NA, colour = NA),
-        strip.text = element_text(hjust = 0)) +
-  labs(title = "Verspreiding per soort 2020")
 
 
-
-soort_kaart_alles <-
-  alles_per_soort %>%
-  filter(waarde > 0) %>%
-  mutate(naam = fct_reorder(naam, waarde, .desc = TRUE)) %>%
-  st_as_sf(coords = c("x", "y"), crs = 28992) %>%
-
-  ggplot() +
-  # ggspatial::annotation_map_tile(type = "cartolight", zoomin = 0) +
-  geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
-  geom_sf(size = 2, colour = "darkred", data = . %>% filter(waarde > 0)) +
-  guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal")) +
-  hhskthema_kaart() +
-  facet_wrap(~naam) +
-  theme(axis.line = element_blank(),
-        strip.background = element_rect(fill = NA, colour = NA),
-        strip.text = element_text(hjust = 0)) +
-  labs(title = "Verspreiding per soort 2020 en 2021")
+# soort_kaart_alles <-
+#   alles_per_soort %>%
+#   filter(waarde > 0) %>%
+#   mutate(naam = fct_reorder(naam, waarde, .desc = TRUE)) %>%
+#   st_as_sf(coords = c("x", "y"), crs = 28992) %>%
+#
+#   ggplot() +
+#   # ggspatial::annotation_map_tile(type = "cartolight", zoomin = 0) +
+#   geom_sf(data = ws_grens, fill = NA, colour = "grey50") +
+#   geom_sf(size = 2, colour = "darkred", data = . %>% filter(waarde > 0)) +
+#   guides(colour = guide_legend("Aantal"), size = guide_legend("Aantal")) +
+#   hhskthema_kaart() +
+#   facet_wrap(~naam) +
+#   theme(axis.line = element_blank(),
+#         strip.background = element_rect(fill = NA, colour = NA),
+#         strip.text = element_text(hjust = 0)) +
+#   labs(title = "Verspreiding per soort 2020 en 2021")
 
 
