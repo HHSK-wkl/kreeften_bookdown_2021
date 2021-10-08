@@ -5,6 +5,7 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
+        <li><a href="./"><img src="images/logo_website.png" style="width: 250px;"></a></li>
         <li><a href="./">Kreeften monitoring 2021</a></li>
       after: |
         <li><a href="https://www.schielandendekrimpenerwaard.nl/" target="blank">hhsk.nl</a></li>
