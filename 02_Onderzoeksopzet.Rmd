@@ -1,0 +1,30 @@
+# Onderzoeksopzet  {#onderzoeksopzet}
+
+## Bemonstering
+
+
+Het onderzoek werd uitgevoerd in mei. In deze periode zijn de kreeften al wel actief, maar nog niet begonnen aan hun jaarlijkse trek. Op elke locatie is een traject geselecteerd van 50 meter. Op dit traject zijn 12 beaasde korven neergezet. Met dit aantal korven is de kans om kreeften te vangen maximaal. Bij een nulvangst is dus bijna zeker dat er geen kreeften voorkomen op deze locatie. 
+
+De korven zijn in de middag uitgezet en de volgende ochtend opgehaald. De kreeften zijn vooral 's nachts actief. Uit eerder onderzoek is gebleken dat een enkele nacht voldoende is om aanwezigheid van kreeften aan te tonen. Bij het ophalen van de korven is per soort het aantal kreeften geteld en is de lengte bepaald. 
+
+Het volledige bemonsteringsprotocol kan <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2020/bemonsteringsprotocol_kreeften.pdf" target="blank">hier</a> worden gedownload.
+
+```{r bemonstering-fotos, fig.show = "hold", out.width = "50%", fig.align = "default", fig.cap="Links: Een ondiepe watergang met kreeftenkorven. Rechts: Een Rode Amerikaanse Rivierkreeft wordt opgemeten."}
+knitr::include_graphics("images/IMG_4205.JPG")
+knitr::include_graphics("images/IMG_4186.JPG")
+```
+
+## Onderzoekslocaties
+
+De onderzoekslocaties voor het onderzoek naar kreeften liggen verspreid over het gehele beheergebied. De onderzoekslocaties zijn de dezelfde locaties waar jaarlijks de vegetatie wordt onderzocht. Hierdoor is het mogelijk om te onderzoeken welke relatie er is tussen de kreeften en de waterplanten. In 2021 waren er 143 locaties gepland.
+
+Om onderzoek naar kreeften te mogen uitvoeren is het nodig om toestemming te ontvangen van de visrechthebbende[^schaaldier]. Dit is de eigenaar van het water of iemand die het visrecht huurt. Om toestemming te krijgen zijn alle visrechthebbenden schriftelijk benaderd om toestemming te krijgen. Iedereen die reageerde heeft toestemming gegeven. Voor 18 locaties is echter geen reactie ontvangen. Hierdoor was het niet mogelijk om hier onderzoek uit te voeren.
+
+Op de onderstaande kaart is te zien voor welke locaties toestemming is ontvangen. Op de kaart is te zien dat er meetlocaties zijn in ons hele beheergebied.
+
+
+```{r fig.cap="Overzichtskaart met locaties waar toestemming van de visrechthebbenden is verkregen."}
+toestemming_kaart
+```
+
+[^schaaldier]: schaaldiervisrecht

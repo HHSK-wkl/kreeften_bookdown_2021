@@ -1,0 +1,37 @@
+# (APPENDIX) Bijlagen {-} 
+
+# Bemonsteringsprotocol {#bemonsteringsprotocol}
+
+Het bemonsteringsprotocol bevat een gedetailleerde beschrijving van de wijze waarop de kreeften onderzocht zijn. Het kan gebruikt worden om op andere locaties een vergelijkbaar onderzoek uit te voeren.
+
+Het bemonsteringsprotocol is <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2020/bemonsteringsprotocol_kreeften.pdf" target="blank">hier</a> te vinden.
+
+# Vangsten per locatie {#data_per_locatie}
+
+
+De vangsten per locatie kunnen hieronder geraadpleegd worden met een interactieve kaart en een interactieve tabel. De gegevens zijn ook te downloaden als MS Excelbestand: <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2020/kreeften_per_soort_en_lengte.xlsx" target="blank">kreeften_per_soort_en_lengte.xlsx</a>.
+
+
+- De kaart kan worden in- en uitgezoomd.
+- Door op een meetlocatie te klikken wordt getoond hoeveel kreeften er op de betreffende locatie zijn gevangen.
+- De ondergrond kan worden vervangen door een luchtfoto.
+
+- De tabel kan worden gesorteerd door op de kolomkoppen te klikken.
+- De gegevens uit de tabel kunnen worden geëxporteerd met de knoppen die onder de tabel staan.
+
+
+
+
+```{r out.width = "100%"}
+kaart_bijlage
+
+```
+</br>
+
+```{r}
+tabel_bijlage
+```
+
+
+
+

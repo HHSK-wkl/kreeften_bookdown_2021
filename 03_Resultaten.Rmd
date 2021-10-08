@@ -1,0 +1,54 @@
+# Resultaten {#resultaten}
+
+## Totaal vangsten
+
+In 2020 hebben de bemonsteringen plaatsgevonden van 3 tot en met 28 mei. Er zijn in totaal 125 locaties onderzocht. In figuur 3.1 is per locatie weergegeven hoeveel kreeften er gevangen zijn[^bijlage_vangsten]. Op 64 van de 71 locaties (90%) in de Krimpenerwaard zijn uitheemse rivierkreeften gevonden. In Schieland is het beeld anders. Daar zijn op slechts 15 van de 54 locaties (28%) kreeften aangetroffen. 
+
+[^bijlage_vangsten]: De vangsten per locatie per soort zijn opgenomen in bijlage [Vangsten per locatie](#data_per_locatie)
+
+De grootste aantallen kreeften zijn aangetroffen in het midden van de Krimpenerwaard, rond Berkenwoude. Aan de noordoostkant van de Krimpenerwaard en in Schieland waren de aantallen kleiner. Het grootste aantal kreeften op één locatie was 80 in de Krimpenerwaard, in Schieland was het grootste aantal 43.
+
+```{r out.width="100%", fig.width=7, fig.cap="Kaart met de hoeveelheid gevangen kreeften per locatie. De open cirkels geven aan dat daar geen kreeften gevangen zijn."}
+totaal_vangst_kaart
+```
+
+## Vangsten per soort
+
+In het gebied zijn 3 soorten uitheemse rivierkreeften gevonden. De Gevlekte, Gestreepte, en Rode Amerikaanse Rivierkreeft. Van deze 3 soorten is de Rode Amerikaanse Rivierkreeft verreweg het meest gevonden. Deze is op 69 van de 79 locaties (87%) met kreeften gevonden. De overige soorten zijn 11 en 16 keer gevonden, meestal in lage aantallen. Op 17 locaties zijn 2 soorten bij elkaar gevonden. 
+
+```{r out.width="100%", fig.width=7, fig.height=3, fig.cap="Kaart die toont welke kreeftensoort op welke locatie gevangen is"}
+soort_kaart
+```
+</br>
+
+
+
+## Aantallen per locatie
+
+De Rode Amerikaanse Rivierkreeft komt niet alleen op de meeste locaties voor, maar heeft ook de grootste aantallen per locatie, tot maximaal 80 exemplaren. Het aantal van 80 erg hoog. Aantallen tussen de 10 en de 50 komen het meest voor. De Gestreepte Amerikaanse Rivierkreeft is met maximaal 43 exemplaren gevonden. Dit was voor deze soort een uitschieter. Op de meeste locaties zijn er slechts enkele aangetroffen. Van de Gevlekte Amerikaanse Rivierkreeft zijn met 1 tot 9 kreeften de laagste aantallen gevangen. 
+
+
+```{r out.width="100%", fig.width=7, fig.cap="Hoeveel kreeften zijn er per soort gevangen"}
+aantal_per_soort
+```
+
+
+## Totale aantallen 2020 en 2021
+
+Dit jaar was het tweede jaar dat het verspreidingsonderzoek is uitgevoerd. In 2020 is het onderzoek voor de eerste keer uitgevoerd. In beide jaren komt een vergelijkbaar beeld naar voren over de verspreiding. In de Krimpenerwaard zijn de kreeften wijdverspreid, en worden er op veel locaties 10-50 kreeften gevonden. In Schieland worden veel minder kreeften gevonden. Hier vinden we ze voornamelijk rond de Hollandse IJssel. 
+
+
+```{r out.width="100%", fig.width=7, fig.height=3, fig.cap="Hoeveel kreeften zijn er in totaal gevangen in 2020 en 2021"}
+alles_vangst_kaart
+```
+
+
+## Veranderde verspreiding
+
+De Rode Amerikaanse Rivierkreeft is in 2021 in ongeveer hetzelfde gebied aangetroffen als in 2020. De Geknobbelde Amerikaanse Rivierkreeft, die in 2020 nog op 2 locaties werd gevonden, is dit jaar niet meer aangetroffen. De Gestreepte en Gevlekte Amerikaanse Rivierkreeft zijn allebei in een groter gebied aangetroffen dan in 2020. De Gestreepte Amerikaanse Rivierkreeft is dit jaar op meer locaties langs de Hollandse IJssel gevonden, en minder in de Krimpenerwaard. De Gevlekte Amerikaanse Rivierkreeft is in een groter gebied gevonden binnen de Krimpenerwaard. 
+
+```{r out.width="100%", fig.width=7, fig.height=4, fig.cap="De verspreiding van de verschillende soorten in 2020 en 2021"}
+soort_kaart_per_jaar
+```
+
+
