@@ -48,7 +48,9 @@ knitr::read_chunk("R/CODE_kreeften_rapportage.R")
 
 Uitheemse rivierkreeften, vooral de Rode Amerikaanse Rivierkreeft, zijn schadelijk voor het ecosysteem en zorgen met hun gegraaf voor oeverafkalving en baggeraanwas. HHSK heeft in 2021 voor de tweede keer gebiedsbreed onderzoek laten uitvoeren naar het voorkomen van uitheemse rivierkreeften.
 
-Het onderzoek is in mei uitgevoerd door op elke onderzoekslocatie 12 kreeftenkorven te plaatsen. Om het onderzoek uit te kunnen voeren heeft HHSK vooraf toestemming gevraagd aan de visrechthebbenden. Doordat HHSK van een aantal visrechthebbenden geen reactie heeft ontvangen was het niet mogelijk om overal onderzoek uit te voeren. Uiteindelijk zijn er 125 locaties onderzocht.
+Om het onderzoek uit te kunnen voeren heeft HHSK vooraf toestemming gevraagd aan de visrechthebbenden. Doordat HHSK van een aantal visrechthebbenden geen reactie heeft ontvangen was het niet mogelijk om overal onderzoek uit te voeren. Uiteindelijk zijn er 125 locaties onderzocht.
+
+Het onderzoek is in mei uitgevoerd door op elke onderzoekslocatie 12 kreeftenkorven te plaatsen. Na een nacht is per soort het aantal kreeften geteld en gemeten.
 
 Uit het onderzoek blijkt dat vooral de Rode Amerikaanse Rivierkreeft veel voorkomt. Daarnaast zijn nog 2 andere soorten rivierkreeften aangetroffen. In de Krimpenerwaard zijn op 90% van alle locaties kreeften gevangen en meestal in vrij grote aantallen. In Schieland zijn kreeften op een derde van de locaties aangetroffen en was het aantal kreeften per locatie ook veel kleiner. Deze resultaten zijn vergelijkbaar met die van 2020. Het onderzoek bevestigt dat de kreeften in een groot deel van het gebied aanwezig zijn. Gezien hun negatieve invloed op het watersysteem is dit zorgelijk. Het blijft daarom noodzakelijk om de ontwikkeling van de kreeften de komende jaren te blijven volgen. 
 

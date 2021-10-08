@@ -1,6 +1,6 @@
 # Colofon {-}
 
-Deze rapportage is gemaakt op *`r format(Sys.time(), '%e %B %Y')`*.
+Deze rapportage is gemaakt op *`r str_trim(format(Sys.time(), '%e %B %Y'))`*.
 
 Vragen over en reacties op deze rapportage kunt u sturen naar rapportage_waterkwaliteit@hhsk.nl
 
