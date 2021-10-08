@@ -4,12 +4,12 @@
 
 Het bemonsteringsprotocol bevat een gedetailleerde beschrijving van de wijze waarop de kreeften onderzocht zijn. Het kan gebruikt worden om op andere locaties een vergelijkbaar onderzoek uit te voeren.
 
-Het bemonsteringsprotocol is <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2020/bemonsteringsprotocol_kreeften.pdf" target="blank">hier</a> te vinden.
+Het bemonsteringsprotocol is <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2021/bemonsteringsprotocol_kreeften.pdf" target="_blank">hier</a> te vinden.
 
 # Vangsten per locatie {#data_per_locatie}
 
 
-De vangsten per locatie kunnen hieronder geraadpleegd worden met een interactieve kaart en een interactieve tabel. De gegevens zijn ook te downloaden als MS Excelbestand: <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2020/kreeften_per_soort_en_lengte.xlsx" target="blank">kreeften_per_soort_en_lengte.xlsx</a>.
+De vangsten per locatie kunnen hieronder geraadpleegd worden met een interactieve kaart en een interactieve tabel. De gegevens zijn ook te downloaden als MS Excelbestand: <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2021/HHSK_kreeften_per_soort_en_lengte_download.xlsx" target="_blank">HHSK_kreeften_per_soort_en_lengte_download.xlsx</a>.
 
 
 - De kaart kan worden in- en uitgezoomd.

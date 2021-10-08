@@ -7,7 +7,7 @@ Het onderzoek werd uitgevoerd in mei. In deze periode zijn de kreeften al wel ac
 
 De korven zijn in de middag uitgezet en de volgende ochtend opgehaald. De kreeften zijn vooral 's nachts actief. Uit eerder onderzoek is gebleken dat een enkele nacht voldoende is om aanwezigheid van kreeften aan te tonen. Bij het ophalen van de korven is per soort het aantal kreeften geteld en is de lengte bepaald. 
 
-Het volledige bemonsteringsprotocol kan <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2020/bemonsteringsprotocol_kreeften.pdf" target="blank">hier</a> worden gedownload.
+Het volledige bemonsteringsprotocol kan <a href="https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/waterkwaliteitsrapportages/kreeften_2021/bemonsteringsprotocol_kreeften.pdf" target="_blank">hier</a> worden gedownload.
 
 ```{r bemonstering-fotos, fig.show = "hold", out.width = "50%", fig.align = "default", fig.cap="Links: Een ondiepe watergang met kreeftenkorven. Rechts: Een Rode Amerikaanse Rivierkreeft wordt opgemeten."}
 knitr::include_graphics("images/IMG_4205.JPG")

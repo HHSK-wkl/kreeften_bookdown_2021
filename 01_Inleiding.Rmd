@@ -10,7 +10,7 @@ Het onderzoek naar de verspreiding van rivierkreeften wordt jaarlijks uitgevoerd
 
 </br>
 
->Er komen in Nederland verschillende soorten rivierkreeften voor. Op de <a href="https://www.eis-nederland.nl/DesktopModules/Bring2mind/DMX/Download.aspx?command=core_download&entryid=689&language=nl-NL&PortalId=4&TabId=563" target="blank">zoekkaart</a> die door Stichting EIS-Nederland (verbonden aan NCB Naturalis) worden de meest voorkomende soorten getoond. Als je een kreeft aantreft, is het met de zoekkaart is het mogelijk om op te zoeken welke soort het is.
+>Er komen in Nederland verschillende soorten rivierkreeften voor. Op de <a href="https://www.eis-nederland.nl/DesktopModules/Bring2mind/DMX/Download.aspx?command=core_download&entryid=689&language=nl-NL&PortalId=4&TabId=563" target="_blank">zoekkaart</a> die door Stichting EIS-Nederland (verbonden aan NCB Naturalis) worden de meest voorkomende soorten getoond. Als je een kreeft aantreft, is het met de zoekkaart is het mogelijk om op te zoeken welke soort het is.
 
 </br>
 
